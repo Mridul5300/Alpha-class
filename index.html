@@ -8,14 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 <!-- custom css -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css"> 
 </head>
 <body>
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home section -->
     <section id="home-screen" class=" min-h-screen text-white flex flex-col justify-center items-center">
                 <div class="flex flex-col items-center gap-4">
-                    <h1 class="text-8x font-extrabold text-8xl">ALPHABET CLASH</h1>
+                    <h1 class="text-8xl font-extrabold anton-regular">ALPHABET CLASH</h1>
                     <p class="text-sm">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
                     <button onclick="play()" class="btn bg-white text-black">Play Now</button>
                 </div>
@@ -76,27 +76,31 @@
               <button class="btn  bg-purple-400">
                 Life
               <img src="images/Vector.svg" alt="">
-              <span>1</span>
+              <span id="curent-life">5</span>
               </button>
           </div>
             <div>
               <button class="btn bg-purple-400">
                 Score
                 <img src="images/monetization_on.svg" alt="">
-                <span>1</span>
+                <span id="cureent score">0</span>
               </button>
           </div>
           </div>
        </div>
     </section>
       <!-- final score start -->
-    <section class=" scroll flex justify-center items-center min-h-screen hidden">
+    <section id="final-scorl" class="flex justify-center items-center min-h-screen hidden">
         <div class="text-white text-center space-y-6 bg-[#FFFFFF33] rounded-lg p-4">
+          <h4 class="text-3xl">OOPS!
+            <br>
+            GAME OVER
+          </h4>
           <h1 class="text-8xl">
             <span class="font-bold">Score :</span>
-            <span>14</span>
+            <span id="game-score">14</span>
           </h1>
-          <button class="btn">Play Again</button>
+          <button onclick="play()" class="btn">Play Again</button>
           <p class="text-white">More Practice</p>
         </div>
     </section>
